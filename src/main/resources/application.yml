@@ -1,4 +1,4 @@
 spring:
   data:
     elasticsearch:
-      cluster-nodes: "114.215.31.72:9200"
+      cluster-nodes: "114.215.31.72:9300"

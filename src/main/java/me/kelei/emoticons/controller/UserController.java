@@ -3,11 +3,10 @@ package me.kelei.emoticons.controller;
 import me.kelei.emoticons.entity.User;
 import me.kelei.emoticons.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/user")
 public class UserController {
 
     private UserService userService;
@@ -18,8 +17,16 @@ public class UserController {
         this.userService = userService;
     }
 
-    public String save(User user) {
-        return "";
+    @PostMapping
+    public String save(@ModelAttribute User user) {
+        return userService.save(user);
+    }
+
+    @GetMapping("/{userId}")
+    public User getUser(@PathVariable String userId){
+        User user = new User();
+        user.setId(userId);
+        return user;
     }
 
 }

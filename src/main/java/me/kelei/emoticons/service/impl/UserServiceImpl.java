@@ -16,7 +16,10 @@ public class UserServiceImpl implements UserService {
         this.userRepository = userRepository;
     }
 
-    public void save(User user) {
+    public String save(User user) {
+
         userRepository.save(user);
+
+        return user.getId();
     }
 }
