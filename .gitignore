@@ -3,3 +3,7 @@
 *.iml
 
 out
+target
+
+config.properties
+application.yml

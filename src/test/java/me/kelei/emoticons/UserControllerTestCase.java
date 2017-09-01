@@ -2,7 +2,6 @@ package me.kelei.emoticons;
 
 import com.google.gson.Gson;
 import me.kelei.emoticons.entity.User;
-import me.kelei.emoticons.MainBoot;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +16,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-//@WebMvcTest(UserController.class)
 @AutoConfigureMockMvc
 @SpringBootTest(classes = MainBoot.class)
 public class UserControllerTestCase {
