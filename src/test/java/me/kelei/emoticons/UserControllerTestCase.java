@@ -26,8 +26,8 @@ public class UserControllerTestCase {
     @Test
     public void testSaveUser() throws Exception{
         User user = new User();
-        user.setEmail("chaclus@gmail.com");
-        user.setName("陈路");
+        user.setEmail("xx@gmail.com");
+        user.setName("xx");
         Gson gson = new Gson();
         String json = gson.toJson(user);
         this.mvc.perform(post("/user").contentType(MediaType.APPLICATION_JSON).content(json)).andDo(print())
